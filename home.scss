@@ -33,7 +33,7 @@ body{
     margin-left: 1.5rem;
 }
 
-/*DESKTOP NAVBAR*/
+/*NAVBAR - DESKTOP*/
 @media (min-width: 1024px) and (max-width: 1440px){
 
     body{
@@ -89,9 +89,7 @@ body{
     
 }
 
-/*tablet navbar min 426*/
-
-/*MOBILE NAVBAR max 425px*/
+/*NAVBAR - MOBILE & TABLET*/
 @media (max-width: 1023px){
     body{
         padding-top: $navbar-mobile-height; /*avoids overlapping navbar with other sections == header*/
@@ -174,10 +172,12 @@ body{
     }
 }
 
+/*HOME - GENERAL*/
 #home{
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
 #home-img{
@@ -185,23 +185,85 @@ body{
     height: 100%;
     margin: 0px;
     object-fit: cover;
-    
+    opacity: 0.8; /*plus home backg color helps darken img*/
 }
 
-#home-text{
+.home-text{
     position: absolute;
     color: white;
 }
 
+.home-button{
+    color: white;
+    background-color: $azul;
+}
+
 /*HOME - MOBILE*/
-@media (max-width: 1023px){
+@media (max-width: 426px){
     #home{
         height: calc(100vh - $navbar-mobile-height); /*full vp - navbar*/
     }
 
-    #home-text{
-        font-size: 1.5rem;
-        font-weight: 700;
+    .title{
+        font-size: 3rem;
+        font-weight: 900;
+        top: 40vh;
+    }
+
+    .intro{
+        font-size: 1.2rem;
+        font-weight: 500;
+        top: 50vh;
+    }
+
+    .home-button, .home-button:visited{
+        position: absolute;
+        top: 58vh;
+        padding: 10px 20px 10px 20px;
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+    .home-button:hover , .home-button:active{
+        background-color: $azul;
+        color: white;
+        opacity: 1;
+        transition: all 0.7s;
+    }
+
+}
+
+/*HOME - tablet*/
+@media (min-width: 427px) and (max-width: 1023px){
+    #home{
+        height: calc(100vh - $navbar-mobile-height); /*full vp - navbar*/
+    }
+
+    .title{
+        font-size: 5rem;
+        font-weight: 900;
+        top: 38vh;
+    }
+
+    .intro{
+        font-size: 2rem;
+        font-weight: 500;
+        top: 50vh;
+    }
+
+    .home-button, .home-button:active, .home-button:visited{
+        position: absolute;
+        top: 58vh;
+        padding: 10px 20px 10px 20px;
+        font-size: 2rem;
+        opacity: 0.9;
+    }
+
+    .home-button:hover , .home-button:active{
+        background-color: $azul;
+        color: white;
+        opacity: 1;
+        transition: all 0.7s;
     }
 
 }
@@ -212,9 +274,31 @@ body{
         height: calc(100vh - $navbar-laptop-height); /*full vp - navbar*/
     }
 
-    #home-text{
-        font-size: 1.5rem;
-        font-weight: 700;
+    .title{
+        font-size: 5rem;
+        font-weight: 900;
+        top: 38vh;
+    }
+
+    .intro{
+        font-size: 2rem;
+        font-weight: 500;
+        top: 50vh;
+    }
+
+    .home-button, .home-button:active, .home-button:visited{
+        position: absolute;
+        top: 58vh;
+        padding: 10px 20px 10px 20px;
+        font-size: 2rem;
+        opacity: 0.9;
+    }    
+
+    .home-button:hover , .home-button:active{
+        background-color: $azul;
+        color: white;
+        opacity: 1;
+        transition: all 0.7s;
     }
 
 }
