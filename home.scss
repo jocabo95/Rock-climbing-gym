@@ -1,6 +1,7 @@
-$azul: #1a2639;
+$main-background: #1a2639;
+$background-text: white;
 $gris: #d9dad7;
-$cafe: #c24d2c;
+$cafe: #c44420;
 $navbar-laptop-height: 70px;
 $navbar-mobile-height: 80px;
 
@@ -15,7 +16,7 @@ body{
 
 #header{
     width: 100%;
-    background-color: $azul;
+    background-color: $main-background;
     position: fixed; /*navbar always on top*/
     top: 0;
 }
@@ -74,14 +75,14 @@ body{
 
     #nav-laptop > ul > li > a{
         text-decoration: none;
-        color: white;
+        color: $background-text;
         font-size: 1.5rem;
         font-weight: 500;
     }
 
     .nav-link:link, .nav-link:hover, .nav-link:active{
         text-decoration: none;
-        color: white;
+        color: $background-text;
         font-size: 1.5rem;
     }
 
@@ -177,7 +178,6 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: black;
 }
 
 #home-img{
@@ -190,7 +190,7 @@ body{
 
 .home-text{
     position: absolute;
-    color: white;
+    color: $background-text;
 }
 
 .title{
@@ -198,8 +198,8 @@ body{
 }
 
 .home-button{
-    color: white;
-    background-color: $azul;
+    color: $background-text;
+    background-color: $main-background;
 }
 
 /*HOME - MOBILE*/
@@ -250,8 +250,8 @@ body{
     }
 
     .home-button:hover , .home-button:active{
-        background-color: $azul;
-        color: white;
+        background-color: $main-background;
+        color: $background-text;
         opacity: 1;
         transition: all 0.7s;
     }
@@ -286,8 +286,8 @@ body{
     }
 
     .home-button:hover , .home-button:active{
-        background-color: $azul;
-        color: white;
+        background-color: $main-background;
+        color: $background-text;
         opacity: 1;
         transition: all 0.7s;
     }
@@ -322,8 +322,8 @@ body{
     }    
 
     .home-button:hover , .home-button:active{
-        background-color: $azul;
-        color: white;
+        background-color: $main-background;
+        color: $background-text;
         opacity: 1;
         transition: all 0.7s;
     }
@@ -334,8 +334,11 @@ body{
 footer{
     width: 100%;
     height: auto;
-    background-color: $azul;
-    color: white;
+    background-color: $main-background;   
+}
+
+.footer-header, .footer-text{
+    background-color: $background-text;
 }
 
 /*FOOTER - MOBILE*/
@@ -352,6 +355,7 @@ footer{
 
     .footer-subheader{
         font-size: 2rem;
+        color: #c24d2c;
     }
 
     .footer-text{
