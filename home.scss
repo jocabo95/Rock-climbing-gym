@@ -1,7 +1,10 @@
 $main-background: #1a2639;
+$secondary-background: #4d596c;
 $background-text: white;
+$details: #E37B2D;
+
 $gris: #d9dad7;
-$cafe: #c44420;
+
 $navbar-laptop-height: 70px;
 $navbar-mobile-height: 80px;
 
@@ -42,6 +45,7 @@ body{
 
     #header{
         height: $navbar-laptop-height;
+        z-index: 10;
     }
 
     #logo{
@@ -122,14 +126,14 @@ body{
     }
 
     .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus{
-        background-color: $azul; /*change primary color*/
+        background-color: $main-background; /*change primary color*/
         border: none;
         margin-right: 1.5rem;
         font-size: 20px;
     }
       
     i{
-        color: white;
+        color: $background-text;
     }
 
     .dropdown-menu{
@@ -138,7 +142,7 @@ body{
         margin-top: 18px; /*avoid dropdown from overlapping navbar*/
         margin-right: -5px;
         border: none;
-        border-top: solid $cafe;
+        border-top: solid $details;
         border-radius: 0px; /*avoids top border to seem shorter in width*/
         z-index: 10;
     }
@@ -153,9 +157,9 @@ body{
         width: 100%;
         height: 11vh;
         margin-left: auto;
-        background-color: $azul;
-        color: white;
-        border: thin white;
+        background-color: $main-background;
+        color: $background-text;
+        border: thin $background-text;
     }
 
     .dropdown-menu > li > a{
@@ -169,7 +173,7 @@ body{
     }
 
     .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active{
-        background-color: #4d596c;
+        background-color: $secondary-background;
     }
 }
 
@@ -178,6 +182,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
 #home-img{
@@ -334,33 +339,84 @@ body{
 footer{
     width: 100%;
     height: auto;
-    background-color: $main-background;   
+    background-color: $main-background; 
 }
 
-.footer-header, .footer-text{
-    background-color: $background-text;
+.footer-header{
+    color: $background-text;
+    font-weight: 600;
+}
+
+.footer-text{
+    color: $background-text;
+}
+
+.footer-subheader{
+    font-weight: 700;
+    color: $details;
 }
 
 /*FOOTER - MOBILE*/
 @media (max-width: 426px){
 
-    .horario{
-        padding: 100px 20px 100px 20px;
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+    }
+
+    #horario, #ubicacion, #contacto{
+        width: 80%;
+        height: auto;
+        margin: 3rem auto 3rem auto;
     }
 
     .footer-header{
         font-size: 2.5rem;
-        font-weight: 600;
+        margin-top: 1.7rem;
+        margin-bottom: 1.7rem;
+        text-align: center;
     }
 
     .footer-subheader{
-        font-size: 2rem;
-        color: #c24d2c;
+        font-size: 1.6rem;
+        color: $details;
     }
 
     .footer-text{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
+
+    #map-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    #socials-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .i-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .i-container > a > i{
+        font-size: 3rem;
+    }
+
+    .i-container > a > i:active{
+        color: $details;
+    }
+    
 }
 
 /*FOOTER - tablet*/
