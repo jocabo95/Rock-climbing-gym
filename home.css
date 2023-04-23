@@ -5,7 +5,6 @@ html {
 
 body {
   margin: 0;
-  /*padding-top: ;*/
 }
 
 #header {
@@ -285,4 +284,29 @@ body {
     opacity: 1;
     transition: all 0.7s;
   }
-}/*# sourceMappingURL=home.css.map */
+}
+/*FOOTER - GENERAL*/
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #1a2639;
+  color: white;
+}
+
+/*FOOTER - MOBILE*/
+@media (max-width: 426px) {
+  .horario {
+    padding: 100px 20px 100px 20px;
+  }
+  .footer-header {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .footer-subheader {
+    font-size: 2rem;
+  }
+  .footer-text {
+    font-size: 1.3rem;
+  }
+}
+/*FOOTER - tablet*//*# sourceMappingURL=home.css.map */
