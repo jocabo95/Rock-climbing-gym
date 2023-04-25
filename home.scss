@@ -11,7 +11,20 @@ $navbar-mobile-height: 80px;
 html{
     box-sizing: border-box;
     font-family: sans-serif;
+    font-size: 16px;
+
+    @media (min-width:768px) {
+        font-size: 18px;
+    }
+    @media (min-width:1024px) {
+        font-size: 19px;
+    }
+    @media (min-width:1280px) {
+        font-size: 20px;
+    }
 }
+
+
 
 body{
     margin: 0;
@@ -222,19 +235,10 @@ body{
         }
     }
 
-    @media (min-width: 375px) and (max-width: 424px){
+    @media (min-width: 375px) and (max-width: 426px){
         .title{
             font-size: 4rem;
             letter-spacing: 8px;
-            font-weight: bold;
-            top: 39vh;
-        }
-    }
-
-    @media (min-width: 425px) and (max-width: 767px){
-        .title{
-            font-size: 4rem;
-            letter-spacing: 10px;
             font-weight: bold;
             top: 39vh;
         }
@@ -264,23 +268,45 @@ body{
 }
 
 /*HOME - tablet*/
-@media (min-width: 427px) and (max-width: 1023px){
+@media (min-width: 427px) and (max-width: 768px){
     #home{
         height: calc(100vh - $navbar-mobile-height); /*full vp - navbar*/
     }
 
-    .title{
-        font-size: 5rem;
-        font-weight: bold;
-        letter-spacing: 30px;
-        top: 37vh;
+    @media (min-width: 427px) and (max-width:600px){
+        .title{
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 10px;
+            top: 37vh;
+        }
+
+        .intro{
+            font-size: 1.5rem;
+            font-weight: 500;
+            top: 50vh;
+        }
     }
 
-    .intro{
-        font-size: 2rem;
-        font-weight: 500;
-        top: 50vh;
+    @media (min-width: 601px) and (max-width:768px){
+        .title{
+            width: 100%;
+            padding-left: 18px;
+            text-align: center;
+            font-size: 4.2rem;
+            font-weight: bolder;
+            letter-spacing: 30px;
+            top: 38vh;
+        }
+
+        .intro{
+            font-size: 2rem;
+            font-weight: 500;
+            top: 49vh;
+        }
     }
+
+    
 
     .home-button, .home-button:active, .home-button:visited{
         position: absolute;
@@ -300,7 +326,7 @@ body{
 }
 
 /*HOME - LAPTOP*/
-@media (min-width: 1024px){
+@media (min-width: 769px){
     #home{
         height: calc(100vh - $navbar-laptop-height); /*full vp - navbar*/
     }
@@ -338,26 +364,49 @@ body{
 /*FOOTER - GENERAL*/
 footer{
     width: 100%;
+    min-height: 100vh;
     height: auto;
     background-color: $main-background; 
 }
 
 .footer-header{
-    color: $background-text;
+    font-size: 2.2rem;
     font-weight: 600;
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+    text-align: left;
+    color: $background-text;
 }
 
-.footer-text{
-    color: $background-text;
+.dia{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .footer-subheader{
+    font-size: 1rem;
     font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: $details;
+}
+
+.footer-text{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: $background-text;
+}
+
+.i-container > a > i{
+    font-size: 3rem;
+    color: $background-text
+}
+
+.i-container > a > i:active{
     color: $details;
 }
 
 /*FOOTER - MOBILE*/
-@media (max-width: 426px){
+@media (max-width: 769px){
 
     footer{
         display: flex;
@@ -373,24 +422,9 @@ footer{
         margin: 3rem auto 3rem auto;
     }
 
-    .footer-header{
-        font-size: 2.5rem;
-        margin-top: 1.7rem;
-        margin-bottom: 1.7rem;
-        text-align: center;
-    }
-
-    .footer-subheader{
-        font-size: 1.6rem;
-        color: $details;
-    }
-
-    .footer-text{
-        font-size: 1.5rem;
-    }
-
     #map-container{
         width: 100%;
+        height: 350px;
         display: flex;
         justify-content: center;
         padding-top: 15px;
@@ -409,17 +443,61 @@ footer{
         align-items: center;
     }
 
-    .i-container > a > i{
-        font-size: 3rem;
-    }
-
-    .i-container > a > i:active{
-        color: $details;
-    }
-    
 }
 
-/*FOOTER - tablet*/
-@media (max-width: 426px){
+/*FOOTER - LAPTOP*/
+@media (min-width: 770px){
 
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.7fr auto;
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+    }
+
+    #horario, #ubicacion, #contacto{
+        width: auto;
+        height: auto;
+        margin: 1rem auto 1rem auto;
+    }
+
+    #horario{
+        grid-column: 1;
+        grid-row: 1;
+        padding: 1rem;
+    }
+
+    #ubicacion{
+        grid-column: 2;
+        grid-row: 1;
+        padding: 1rem;
+    }
+
+    #contacto{
+        grid-column: 1 / -1;
+        grid-row: 2;
+        padding: 1rem;
+    }
+
+    #map-container{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #socials-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 2rem;
+    }
+
+    .i-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
 }
