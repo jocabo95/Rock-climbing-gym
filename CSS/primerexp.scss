@@ -1,0 +1,153 @@
+$main-background: #1a2639;
+$secondary-background: #4d596c;
+$background-text: white;
+$details: #E37B2D;
+
+$gris: #d9dad7;
+
+$navbar-laptop-height: 70px;
+$navbar-mobile-height: 80px;
+
+/*HOME - GENERAL*/
+#home{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    z-index: 1;
+    overflow:hidden;
+}
+
+.home-img{
+    width: 100%;
+    margin: 0px;
+    opacity: 0.3; /*plus home backg color helps darken img*/
+    z-index: 1;
+}
+
+.home-text{
+    position: absolute;
+    color: $background-text;
+}
+
+.title{
+    font-family: 'Antonio', sans-serif;
+}
+
+
+/*HOME - MOBILE*/
+@media (max-width: 426px){
+
+    @media (max-width: 375px){
+        .title{
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            font-weight: bold;
+            top: 25vh;
+        }
+
+        .intro{
+            font-size: 0.8rem;
+            font-weight: 500;
+            top: 33vh;
+        }
+
+    }
+
+    @media (min-width: 375px) and (max-width: 426px){
+        .title{
+            font-size: 1.5rem;
+            letter-spacing: 8px;
+            font-weight: bold;
+            top: 20vh;
+        }
+
+        .intro{
+            font-size: 1rem;
+            font-weight: 500;
+            top: 25vh;
+        }
+    
+    }
+
+}
+
+/*HOME - tablet*/
+@media (min-width: 427px) and (max-width: 768px){
+
+    @media (min-width: 427px) and (max-width:600px){
+        .title{
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 10px;
+            top: 25vh;
+        }
+
+        .intro{
+            font-size: 1.5rem;
+            font-weight: 500;
+            top: 33vh;
+        }
+
+    }
+
+    @media (min-width: 601px) and (max-width:768px){
+        .title{
+            width: 100%;
+            padding-left: 18px;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bolder;
+            letter-spacing: 30px;
+            top: 25vh;
+        }
+
+        .intro{
+            font-size: 1.2rem;
+            font-weight: 500;
+            top: 33vh;
+        }
+
+    }
+
+}
+
+/*HOME - LAPTOP*/
+@media (min-width: 769px){
+
+    @media (orientation: portrait){
+        .title{
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 25px;
+            top: 18vh;
+        }
+    
+        .intro{
+            font-size: 1.2rem;
+            font-weight: 500;
+            top: 25vh;
+        }
+        
+    }    
+
+    @media (orientation: landscape){
+        .title{
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 25px;
+            top: 20vh;
+        }
+    
+        .intro{
+            font-size: 1rem;
+            font-weight: 500;
+            top: 30vh;
+        }
+    
+    } 
+
+}
+
+

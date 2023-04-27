@@ -1,0 +1,320 @@
+$main-background: #1a2639;
+$secondary-background: #4d596c;
+$background-text: white;
+$details: #E37B2D;
+
+$gris: #d9dad7;
+
+$navbar-laptop-height: 70px;
+$navbar-mobile-height: 80px;
+
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+body{
+    margin: 0;
+}
+
+#header{
+    width: 100%;
+    background-color: $main-background;
+    position: fixed; /*navbar always on top*/
+    top: 0;
+}
+
+#navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo{
+    margin-left: 1.5rem;
+}
+
+/*NAVBAR - DESKTOP*/
+@media (min-width: 1024px) and (max-width: 1440px){
+
+    body{
+        padding-top: $navbar-laptop-height; /*avoids overlapping navbar with other sections == header*/
+    }
+
+    #header{
+        height: $navbar-laptop-height;
+        z-index: 10;
+    }
+
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-mobile{
+        display: none; /*hide dropdown*/
+    }
+
+    #nav-laptop{
+        display: inline; /*show navbar*/
+        height: 100%;
+        width: 100%;
+    }
+
+    #nav-laptop > ul{
+        width: 100%;
+        height: 100%; /*occupy full nav laptop to center vertially li text*/
+        display: flex;
+        flex-direction: row; /*makes ul horizontal list*/
+        align-items: center;
+        justify-content: right; /*ul always @ right side*/
+    }
+
+    #nav-laptop > ul > li{
+        list-style: none;
+        margin-right: 2rem; /*assure margin with right border and gap between li*/
+    }
+
+    #nav-laptop > ul > li > a{
+        text-decoration: none;
+        color: $background-text;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .nav-link:link, .nav-link:hover, .nav-link:active{
+        text-decoration: none;
+        color: $background-text;
+        font-size: 1.5rem;
+    }
+
+    
+}
+
+/*NAVBAR - MOBILE & TABLET*/
+@media (max-width: 1023px){
+    body{
+        padding-top: $navbar-mobile-height; /*avoids overlapping navbar with other sections == header*/
+    }
+
+    #header{
+        height: $navbar-mobile-height;
+        z-index: 10;
+    }
+
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    #nav-laptop{
+        display: none; /*hide navbar*/
+    }
+
+    .nav-mobile{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .dropdown-toggle:after {
+        display: none; /*remove donwards icon in dropdown menu*/
+    }
+
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus{
+        background-color: $main-background; /*change primary color*/
+        border: none;
+        margin-right: 1.5rem;
+        font-size: 20px;
+    }
+      
+    i{
+        color: $background-text;
+    }
+
+    .dropdown-menu{
+        width: 100vw;
+        padding: 0;
+        margin-top: 18px; /*avoid dropdown from overlapping navbar*/
+        margin-right: -5px;
+        border: none;
+        border-top: solid $details;
+        border-radius: 0px; /*avoids top border to seem shorter in width*/
+        z-index: 10;
+    }
+
+    .dropdown-divider{
+        margin: 0;
+        height: 1px;
+        border: solid thin $gris;
+    }
+
+    .dropdown-menu > li{
+        width: 100%;
+        height: 11vh;
+        margin-left: auto;
+        background-color: $main-background;
+        color: $background-text;
+        border: thin $background-text;
+    }
+
+    .dropdown-menu > li > a{
+        width: 100%;
+        height: 100%;
+        display: flex; /*centers menu items*/
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-family: sans-serif;
+    }
+
+    .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active{
+        background-color: $secondary-background;
+    }
+}
+
+/*FOOTER - GENERAL*/
+footer{
+    width: 100%;
+    height: auto;
+    background-color: $main-background; 
+    z-index: 9;
+}
+
+#horario, #ubicacion, #contacto{
+    padding: 0 2rem 0 2rem;
+}
+
+.footer-header{
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+    text-align: left;
+    color: $background-text;
+}
+
+.dia{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-subheader{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: $details;
+}
+
+.footer-text{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: $background-text;
+}
+
+.i-container > a > i{
+    font-size: 3rem;
+    color: $background-text
+}
+
+.i-container > a > i:active{
+    color: $details;
+}
+
+/*FOOTER - MOBILE*/
+@media (max-width: 769px){
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+    }
+
+    #horario, #ubicacion, #contacto{
+        width: 80%;
+        height: auto;
+        margin: 1.5rem auto 1.5rem auto;
+    }
+
+    #map-container{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    #socials-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20%;
+    }
+
+    .i-container{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+/*FOOTER - LAPTOP*/
+@media (min-width: 770px){
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.6fr 0.3fr;
+    }
+
+    #horario, #ubicacion, #contacto{
+        width: 100%;
+        height: auto;
+    }
+
+    #horario{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #ubicacion{
+        grid-column: 2;
+        grid-row: 1 / -1;
+    }
+
+    #contacto{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #map-container{
+        width: auto;
+        height:  40%;
+    }
+
+    #socials-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .i-container{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+}
