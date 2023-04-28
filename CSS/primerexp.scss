@@ -9,7 +9,7 @@ $navbar-laptop-height: 70px;
 $navbar-mobile-height: 80px;
 
 /*HOME - GENERAL*/
-#home{
+#title-container{
     width: 100%;
     height: 30vh;
     display: flex;
@@ -19,14 +19,14 @@ $navbar-mobile-height: 80px;
     overflow:hidden;
 }
 
-.home-img{
+.title-img{
     width: 100%;
     margin: 0px;
     opacity: 0.3; /*plus home backg color helps darken img*/
     z-index: 1;
 }
 
-.home-text{
+.title-text{
     position: absolute;
     color: $background-text;
 }
@@ -36,7 +36,7 @@ $navbar-mobile-height: 80px;
 }
 
 
-/*HOME - MOBILE*/
+/*TITLE - MOBILE*/
 @media (max-width: 426px){
 
     @media (max-width: 375px){
@@ -73,7 +73,7 @@ $navbar-mobile-height: 80px;
 
 }
 
-/*HOME - tablet*/
+/*TITLE - tablet*/
 @media (min-width: 427px) and (max-width: 768px){
 
     @media (min-width: 427px) and (max-width:600px){
@@ -113,7 +113,7 @@ $navbar-mobile-height: 80px;
 
 }
 
-/*HOME - LAPTOP*/
+/*TITLE - LAPTOP*/
 @media (min-width: 769px){
 
     @media (orientation: portrait){
@@ -150,4 +150,56 @@ $navbar-mobile-height: 80px;
 
 }
 
+/*INFORMATION - GENERAL*/
+#information{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem 2rem 1rem;
+}
 
+.info-container{
+    width: 100%;
+    height: auto;
+    background-color: $background-text;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+}
+
+.text-container{
+    text-align: left;
+}
+
+h2{
+    color: $main-background;
+    font-weight: 700;
+    text-align: center;
+}
+
+.divition{
+    background-color: $secondary-background;
+    height: 1px;
+    margin-bottom: 0.7rem;
+}
+
+/*INFORMATION - MOBILE*/
+@media (max-width: 420px) {
+    .info-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .text-container{
+        border-radius: 20px;
+    }
+    
+    .info-img{
+        display: none;
+    }
+}

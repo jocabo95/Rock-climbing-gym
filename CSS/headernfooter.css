@@ -226,7 +226,7 @@ footer {
     align-items: center;
   }
 }
-/*FOOTER - LAPTOP*/
+/*FOOTER - TABLET & LAPTOP*/
 @media (min-width: 770px) {
   footer {
     display: grid;

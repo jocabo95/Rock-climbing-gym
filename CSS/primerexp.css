@@ -1,5 +1,5 @@
 /*HOME - GENERAL*/
-#home {
+#title-container {
   width: 100%;
   height: 30vh;
   display: flex;
@@ -9,14 +9,14 @@
   overflow: hidden;
 }
 
-.home-img {
+.title-img {
   width: 100%;
   margin: 0px;
   opacity: 0.3; /*plus home backg color helps darken img*/
   z-index: 1;
 }
 
-.home-text {
+.title-text {
   position: absolute;
   color: white;
 }
@@ -25,7 +25,7 @@
   font-family: "Antonio", sans-serif;
 }
 
-/*HOME - MOBILE*/
+/*TITLE - MOBILE*/
 @media (max-width: 426px) and (max-width: 375px) {
   .title {
     font-size: 1.5rem;
@@ -52,7 +52,7 @@
     top: 25vh;
   }
 }
-/*HOME - tablet*/
+/*TITLE - tablet*/
 @media (min-width: 427px) and (max-width: 768px) and (min-width: 427px) and (max-width: 600px) {
   .title {
     font-size: 3rem;
@@ -82,7 +82,7 @@
     top: 33vh;
   }
 }
-/*HOME - LAPTOP*/
+/*TITLE - LAPTOP*/
 @media (min-width: 769px) and (orientation: portrait) {
   .title {
     font-size: 3rem;
@@ -107,5 +107,56 @@
     font-size: 1rem;
     font-weight: 500;
     top: 30vh;
+  }
+}
+/*INFORMATION - GENERAL*/
+#information {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.info-container {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.text-container {
+  text-align: left;
+}
+
+h2 {
+  color: #1a2639;
+  font-weight: 700;
+  text-align: center;
+}
+
+.divition {
+  background-color: #4d596c;
+  height: 1px;
+  margin-bottom: 0.7rem;
+}
+
+/*INFORMATION - MOBILE*/
+@media (max-width: 420px) {
+  .info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .text-container {
+    border-radius: 20px;
+  }
+  .info-img {
+    display: none;
   }
 }/*# sourceMappingURL=primerexp.css.map */

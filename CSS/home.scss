@@ -39,7 +39,7 @@ $navbar-mobile-height: 80px;
     padding: 0;
 }
 
-/*HOME - MOBILE*/
+/*HOME - MOBILE   width given by home-img resolution. cant go wider if full screen needed*/
 @media (max-width: 426px){
     #home{
         height: calc(100vh - $navbar-mobile-height); /*full vp - navbar*/
