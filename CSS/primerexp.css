@@ -124,9 +124,12 @@
 .info-container {
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 .text-container {
@@ -141,22 +144,45 @@ h2 {
 
 .divition {
   background-color: #4d596c;
-  height: 1px;
+  height: 2px;
   margin-bottom: 0.7rem;
 }
 
 /*INFORMATION - MOBILE*/
 @media (max-width: 420px) {
-  .info-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-  }
   .text-container {
+    width: 97%;
+    height: 90%;
     border-radius: 20px;
   }
-  .info-img {
+  .info-img-container, .info-container-img {
     display: none;
+  }
+  .info-container {
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+/*INFORMATION - TABLET & PC*/
+@media (min-width: 421px) {
+  .divition {
+    display: none;
+  }
+  .text-container {
+    min-width: 200px;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+  }
+  .info-img-container {
+    width: 40%;
+    height: auto;
+    position: relative;
+    left: -20px;
+  }
+  .info-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
   }
 }/*# sourceMappingURL=primerexp.css.map */
