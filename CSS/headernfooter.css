@@ -27,51 +27,6 @@ body {
   margin-left: 1.5rem;
 }
 
-/*NAVBAR - DESKTOP*/
-@media (min-width: 1024px) and (max-width: 1440px) {
-  body {
-    padding-top: 70px; /*avoids overlapping navbar with other sections == header*/
-  }
-  #header {
-    height: 70px;
-    z-index: 10;
-  }
-  #logo {
-    width: 50px;
-    height: 50px;
-  }
-  .nav-mobile {
-    display: none; /*hide dropdown*/
-  }
-  #nav-laptop {
-    display: inline; /*show navbar*/
-    height: 100%;
-    width: 100%;
-  }
-  #nav-laptop > ul {
-    width: 100%;
-    height: 100%; /*occupy full nav laptop to center vertially li text*/
-    display: flex;
-    flex-direction: row; /*makes ul horizontal list*/
-    align-items: center;
-    justify-content: right; /*ul always @ right side*/
-  }
-  #nav-laptop > ul > li {
-    list-style: none;
-    margin-right: 2rem; /*assure margin with right border and gap between li*/
-  }
-  #nav-laptop > ul > li > a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  .nav-link:link, .nav-link:hover, .nav-link:active {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-  }
-}
 /*NAVBAR - MOBILE & TABLET*/
 @media (max-width: 1023px) {
   body {
@@ -141,6 +96,51 @@ body {
   }
   .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active {
     background-color: #4d596c;
+  }
+}
+/*NAVBAR - DESKTOP*/
+@media (min-width: 1024px) {
+  body {
+    padding-top: 70px; /*avoids overlapping navbar with other sections == header*/
+  }
+  #header {
+    height: 70px;
+    z-index: 10;
+  }
+  #logo {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-mobile {
+    display: none; /*hide dropdown*/
+  }
+  #nav-laptop {
+    display: inline; /*show navbar*/
+    height: 100%;
+    width: 100%;
+  }
+  #nav-laptop > ul {
+    width: 100%;
+    height: 100%; /*occupy full nav laptop to center vertially li text*/
+    display: flex;
+    flex-direction: row; /*makes ul horizontal list*/
+    align-items: center;
+    justify-content: right; /*ul always @ right side*/
+  }
+  #nav-laptop > ul > li {
+    list-style: none;
+    margin-right: 2rem; /*assure margin with right border and gap between li*/
+  }
+  #nav-laptop > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .nav-link:link, .nav-link:hover, .nav-link:active {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
   }
 }
 /*FOOTER - GENERAL*/
