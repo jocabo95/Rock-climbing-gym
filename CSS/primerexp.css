@@ -65,7 +65,7 @@ h2 {
   }
   .info-container {
     height: auto;
-    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
   }
 }
 /*INFORMATION - TABLET & PC*/

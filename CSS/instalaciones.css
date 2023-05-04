@@ -1,0 +1,87 @@
+/*INFORMATION - GENERAL*/
+#information {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 1rem 5rem 1rem;
+}
+
+.trainingboards-container, .climbingwall-container, .facilities-container {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color: #1a2639;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.divition {
+  width: 100%;
+  max-width: 750px;
+  background-color: #4d596c;
+  height: 2px;
+  margin-bottom: 1rem;
+}
+
+.img-board {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+.img-card {
+  width: 90%;
+  max-width: 320px;
+  height: auto;
+  padding-top: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.2);
+}
+
+.facilities-img {
+  width: 100%;
+  border-radius: 0px 0px 20px 20px;
+}
+
+/*CONTENT - MOBILE*/
+@media (max-width: 425px) {
+  .img-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+/*CONTENT - LAPTOP*/
+@media (min-width: 425px) {
+  .img-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}/*# sourceMappingURL=instalaciones.css.map */
