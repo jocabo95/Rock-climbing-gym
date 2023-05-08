@@ -6,11 +6,16 @@
   background-color: black;
 }
 
-#home-img {
+picture {
+  width: 100%;
+  height: 100%;
+}
+
+.home-img {
   width: 100%;
   height: 100%;
   margin: 0px;
-  object-fit: cover;
+  object-fit: cover; /*covers container. <picture> mus have width n height of 100% to work*/
   opacity: 0.8; /*plus home backg color helps darken img*/
 }
 

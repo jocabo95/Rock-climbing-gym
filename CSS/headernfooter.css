@@ -155,11 +155,17 @@ body {
   overflow: hidden;
 }
 
+picture {
+  width: 100%;
+  height: 100%;
+}
+
 .title-img {
   width: 100%;
   margin: 0px;
   opacity: 0.3; /*plus home backg color helps darken img*/
   z-index: 1;
+  object-fit: cover;
 }
 
 .title-text {
