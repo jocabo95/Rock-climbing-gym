@@ -41,7 +41,6 @@ picture{
 .home-button{
     color: $background-text;
     background-color: $main-background;
-    padding: 0;
 }
 
 /*HOME - MOBILE   width given by home-img resolution. cant go wider if full screen needed*/
@@ -69,10 +68,11 @@ picture{
             top: 55vh;
         }
 
-        .home-button, .home-button:visited{
+        .home-button{
             padding: 10px 20px 10px 20px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             opacity: 0.9;
+            font-weight: bold;
         }
     }
 

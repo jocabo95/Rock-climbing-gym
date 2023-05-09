@@ -31,7 +31,6 @@ picture {
 .home-button {
   color: white;
   background-color: #1a2639;
-  padding: 0;
 }
 
 /*HOME - MOBILE   width given by home-img resolution. cant go wider if full screen needed*/
@@ -56,10 +55,11 @@ picture {
     position: absolute;
     top: 55vh;
   }
-  .home-button, .home-button:visited {
+  .home-button {
     padding: 10px 20px 10px 20px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     opacity: 0.9;
+    font-weight: bold;
   }
 }
 @media (max-width: 426px) and (min-width: 375px) and (max-width: 426px) {
