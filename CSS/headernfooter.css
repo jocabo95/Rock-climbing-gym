@@ -269,20 +269,36 @@ footer {
   z-index: 9;
 }
 
-#horario, #ubicacion, #contacto {
-  padding: 0 2rem 0 2rem;
+footer, i-container {
+  /*centers footer container in middle*/
+  /*container of individual icon*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 4rem 3rem 4rem;
 }
 
-.footer-header {
+.footer-container {
+  width: 100%; /*does not go 100% due to footer padding*/
+  height: 100%;
+  max-width: 1200px;
+}
+
+.footer1, .footer2 {
+  width: 100%;
+  height: auto;
+}
+
+.footer-header { /*titles "horarios" and "contacto"*/
   font-size: 2.2rem;
   font-weight: 600;
-  margin-top: 1.7rem;
   margin-bottom: 1.7rem;
   text-align: left;
   color: white;
 }
 
 .dia {
+  /*block with day and opening hours*/
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -290,99 +306,63 @@ footer {
 .footer-subheader {
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
   color: #E37B2D;
 }
 
 .footer-text {
   font-size: 1rem;
-  margin-bottom: 0.5rem;
   color: white;
+}
+
+.footer-text, .footer-subheader {
+  margin-bottom: 0.5rem;
+}
+
+#socials-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .i-container > a > i {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
 }
 
-.i-container > a > i:active {
+.i-container > a > i:active, .i-container > a > i:hover {
   color: #E37B2D;
 }
 
 /*FOOTER - MOBILE*/
-@media (max-width: 769px) {
-  footer {
+@media (max-width: 425px) {
+  .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1.7rem;
-    padding-bottom: 1.7rem;
+    margin: 2rem 2rem;
+    gap: 3rem;
   }
-  #horario, #ubicacion, #contacto {
-    width: 80%;
+  #horario, #contacto {
     height: auto;
-    margin: 1.5rem auto 1.5rem auto;
-  }
-  #map-container {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
   }
   #socials-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 20%;
-  }
-  .i-container {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*container with all icons*/
+    gap: 15%;
+    margin-top: 2rem;
   }
 }
 /*FOOTER - TABLET & LAPTOP*/
-@media (min-width: 770px) {
-  footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.6fr 0.3fr;
-  }
-  #horario, #ubicacion, #contacto {
-    width: 100%;
-    height: auto;
-  }
-  #horario {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  #ubicacion {
-    grid-column: 2;
-    grid-row: 1/-1;
-  }
-  #contacto {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  #map-container {
-    width: auto;
-    height: 40%;
-  }
-  #socials-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 3rem;
-    margin-bottom: 2rem;
-  }
-  .i-container {
-    width: auto;
+@media (min-width: 426px) {
+  .footer-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 20%;
+  }
+  #socials-container {
+    /*container with all icons*/
+    gap: 3rem;
+    margin-top: 5rem;
   }
 }/*# sourceMappingURL=headernfooter.css.map */
