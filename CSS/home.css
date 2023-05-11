@@ -1,213 +1,90 @@
 /*HOME - GENERAL*/
 #home {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  /*heigh stipulated in media querys due to navbar heigh vaiations*/
   background-color: black;
 }
 
 picture {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 2;
 }
 
-.home-img {
+.home-text-container {
   width: 100%;
   height: 100%;
-  margin: 0px;
-  object-fit: cover; /*covers container. <picture> mus have width n height of 100% to work*/
-  opacity: 0.8; /*plus home backg color helps darken img*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  position: relative;
+  z-index: 5;
 }
 
 .home-text {
-  position: absolute;
   color: white;
 }
 
 .title {
   font-family: "Antonio", sans-serif;
+  letter-spacing: 3vw;
+  font-size: 7vh;
+  font-size: max(20px, 7vh); /*sets min font size to lowest value inside ()*/
+}
+
+.intro {
+  font-size: 3vh;
+  font-size: max(12px, 3vh);
+}
+
+.home-img {
+  width: 100%;
+  /*heigh stipulated in media querys due to navbar heigh vaiations*/
+  opacity: 0.8;
+  object-fit: cover;
 }
 
 .home-button {
   color: white;
   background-color: #1a2639;
+  font-size: 2vh;
+  font-size: max(10px, 3vh);
+  font-weight: 500;
+  padding: 1.5vh 3vh 1.5vh 3vh;
 }
 
-/*HOME - MOBILE   width given by home-img resolution. cant go wider if full screen needed*/
-@media (max-width: 426px) {
+.home-button:hover, .home-button:active {
+  background-color: #1a2639;
+  color: white;
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+/*HOME - MOBILE & TABLET  width given by navbar responsiveness*/
+@media (max-width: 1023px) {
   #home {
-    height: calc(100vh - 80px); /*full vp - navbar*/
+    /*heights are adjusted depending of navbars height*/
+    height: calc(100vh - 80px);
   }
-}
-@media (max-width: 426px) and (max-width: 375px) {
-  .title {
-    font-size: 3.5rem;
-    letter-spacing: 5px;
-    font-weight: bold;
-    top: 40vh;
+  picture {
+    top: 80px;
   }
-  .intro {
-    font-size: 1.2rem;
-    font-weight: 500;
-    top: 50vh;
-  }
-  #btn-link {
-    position: absolute;
-    top: 55vh;
-  }
-  .home-button {
-    padding: 10px 20px 10px 20px;
-    font-size: 1.2rem;
-    opacity: 0.9;
-    font-weight: bold;
-  }
-}
-@media (max-width: 426px) and (min-width: 375px) and (max-width: 426px) {
-  .title {
-    font-size: 4rem;
-    letter-spacing: 8px;
-    font-weight: bold;
-    top: 39vh;
-  }
-  .intro {
-    font-size: 1.2rem;
-    font-weight: 500;
-    top: 51vh;
-  }
-  #btn-link {
-    position: absolute;
-    top: 58vh;
-  }
-  .home-button, .home-button:visited {
-    padding: 10px 20px 10px 20px;
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-}
-@media (max-width: 426px) {
-  .home-button:hover, .home-button:active {
-    background-color: #1a2639;
-    color: white;
-    opacity: 1;
-    transition: all 0.7s;
-  }
-}
-/*HOME - tablet*/
-@media (min-width: 427px) and (max-width: 768px) {
-  #home {
-    height: calc(100vh - 80px); /*full vp - navbar*/
-  }
-}
-@media (min-width: 427px) and (max-width: 768px) and (min-width: 427px) and (max-width: 600px) {
-  .title {
-    font-size: 4rem;
-    font-weight: bold;
-    letter-spacing: 10px;
-    top: 37vh;
-  }
-  .intro {
-    font-size: 1.5rem;
-    font-weight: 500;
-    top: 50vh;
-  }
-  #btn-link {
-    position: absolute;
-    top: 58vh;
-  }
-  .home-button, .home-button:active, .home-button:visited {
-    padding: 8px 20px 8px 20px;
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-}
-@media (min-width: 427px) and (max-width: 768px) and (min-width: 601px) and (max-width: 768px) {
-  .title {
-    width: 100%;
-    padding-left: 18px;
-    text-align: center;
-    font-size: 4.2rem;
-    font-weight: bolder;
-    letter-spacing: 30px;
-    top: 42vh;
-  }
-  .intro {
-    font-size: 1.2rem;
-    font-weight: 500;
-    top: 52vh;
-  }
-  #btn-link {
-    position: absolute;
-    top: 58vh;
-  }
-  .home-button, .home-button:active, .home-button:visited {
-    padding: 10px 20px 10px 20px;
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-}
-@media (min-width: 427px) and (max-width: 768px) {
-  .home-button:hover, .home-button:active {
-    background-color: #1a2639;
-    color: white;
-    opacity: 1;
-    transition: all 0.7s;
+  .home-img {
+    height: calc(100vh - 80px);
   }
 }
 /*HOME - LAPTOP*/
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   #home {
-    height: calc(100vh - 70px); /*full vp - navbar*/
+    height: calc(100vh - 70px);
   }
-}
-@media (min-width: 769px) and (orientation: portrait) {
-  .title {
-    font-size: 5rem;
-    font-weight: bold;
-    letter-spacing: 25px;
-    top: 40vh;
+  picture {
+    top: 70px;
   }
-  .intro {
-    font-size: 1.2rem;
-    font-weight: 500;
-    top: 50vh;
-  }
-  #btn-link {
-    position: absolute;
-    top: 55vh;
-  }
-  .home-button, .home-button:active, .home-button:visited {
-    padding: 10px 20px 10px 20px;
-    font-size: 0.8rem;
-    opacity: 0.9;
-  }
-}
-@media (min-width: 769px) and (orientation: landscape) {
-  .title {
-    font-size: 5rem;
-    font-weight: bold;
-    letter-spacing: 25px;
-    top: 40vh;
-  }
-  .intro {
-    font-size: 1.2rem;
-    font-weight: 500;
-    top: 60vh;
-  }
-  #btn-link {
-    position: absolute;
-    top: 70vh;
-  }
-  .home-button, .home-button:active, .home-button:visited {
-    padding: 10px 20px 10px 20px;
-    font-size: 0.8rem;
-    opacity: 0.9;
-  }
-}
-@media (min-width: 769px) {
-  .home-button:hover, .home-button:active {
-    background-color: #1a2639;
-    color: white;
-    opacity: 1;
-    transition: all 0.7s;
+  .home-img {
+    height: calc(100vh - 70px);
   }
 }/*# sourceMappingURL=home.css.map */
