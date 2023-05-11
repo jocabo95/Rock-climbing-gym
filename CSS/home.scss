@@ -47,7 +47,7 @@ picture{
 }
 
 .intro{
-    font-size: 1.2rem;
+    font-size: 3vh;
 }
 
 .home-img{
@@ -60,6 +60,7 @@ picture{
 .home-button{
     color: $background-text;
     background-color: $main-background;
+    font-size: 2vh;
     font-weight: 500;
     padding: 1.5vh 3vh 1.5vh 3vh;
 }
