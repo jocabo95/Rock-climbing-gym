@@ -44,10 +44,12 @@ picture{
     font-family: 'Antonio', sans-serif;
     letter-spacing: 3vw;
     font-size: 7vh;
+    font-size: max(20px, 7vh); /*sets min font size to lowest value inside ()*/
 }
 
 .intro{
     font-size: 3vh;
+    font-size: max(12px, 3vh);
 }
 
 .home-img{
@@ -61,6 +63,7 @@ picture{
     color: $background-text;
     background-color: $main-background;
     font-size: 2vh;
+    font-size: max(10px, 3vh);
     font-weight: 500;
     padding: 1.5vh 3vh 1.5vh 3vh;
 }
