@@ -317,6 +317,7 @@ footer, i-container{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    gap: 2rem;
 }
 
 .i-container > a > i{
@@ -345,7 +346,6 @@ footer, i-container{
 
     #socials-container{
         /*container with all icons*/
-        gap: 15%;
         margin-top: 2rem;
     }
 
@@ -363,7 +363,6 @@ footer, i-container{
     
     #socials-container{
         /*container with all icons*/
-        gap: 3rem;
         margin-top: 5rem;
     }
    
