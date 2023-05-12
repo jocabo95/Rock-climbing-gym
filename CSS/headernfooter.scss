@@ -13,13 +13,13 @@ $img-laptop-height: 40vh;
 html{
     max-width: 100vw;
     box-sizing: border-box;
-    font-family: sans-serif;
     font-size: 16px;
 }
 
 body{
     max-width: 100vw;
     margin: 0;
+    font-family: 'PT Sans', sans-serif;
 }
 
 #header{
@@ -98,7 +98,7 @@ body{
         margin-right: -5px; /*makes dropdown occupy full screen width*/
         border: none;
         border-top: solid $details;
-        border-bottom: solid thin $details;
+        border-bottom: solid 1px $details;
         border-radius: 0px; /*avoids top border to seem shorter in width*/
         z-index: 100;
     }
@@ -106,7 +106,7 @@ body{
     .dropdown-divider{
         margin: 0;
         height: 1px;
-        border: solid thin $gris;
+        border: solid 1px $gris;
     }
 
     .dropdown-menu > li{
@@ -120,11 +120,13 @@ body{
     .dropdown-menu > li > a{
         width: 100%;
         height: 100%;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
         display: flex; /*centers menu items*/
         justify-content: center;
         align-items: center;
         font-size: 1rem;
-        font-family: sans-serif;
+        
     }
 
     .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active{
@@ -177,6 +179,7 @@ body{
 
     #nav-laptop > ul > li > a{
         text-decoration: none;
+        font-family: 'Raleway', sans-serif;
         color: $background-text;
         font-size: 1.2rem;
         font-weight: 500;
@@ -280,7 +283,8 @@ footer, i-container{
 
 .footer-header{ /*titles "horarios" and "contacto"*/
     font-size: 2.2rem;
-    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     margin-bottom: 1.7rem;
     text-align: left;
     color: $background-text;
@@ -294,6 +298,7 @@ footer, i-container{
 
 .footer-subheader{
     font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: $details;
 }

@@ -30,9 +30,8 @@ picture {
 
 .title {
   font-family: "Antonio", sans-serif;
-  letter-spacing: 3vw;
-  font-size: 7vh;
-  font-size: max(20px, 7vh); /*sets min font size to lowest value inside ()*/
+  font-size: max(60px, 5vw); /*sets min font size to lowest value inside ()*/
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .intro {
@@ -50,8 +49,7 @@ picture {
 .home-button {
   color: white;
   background-color: #1a2639;
-  font-size: 2vh;
-  font-size: max(10px, 3vh);
+  font-size: max(1rem, 2vh);
   font-weight: 500;
   padding: 1.5vh 3vh 1.5vh 3vh;
 }
@@ -59,7 +57,7 @@ picture {
 .home-button:hover, .home-button:active {
   background-color: #1a2639;
   color: white;
-  opacity: 0.8;
+  opacity: 0.92;
   transition: all 0.3s;
 }
 
